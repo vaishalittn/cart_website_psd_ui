@@ -76,7 +76,7 @@
       font-weight: 300px; }
   .wrapper .special-collection {
     background-color: #2e2e2e; }
-    .wrapper .special-collection .collection-wrapper, .wrapper .special-collection .collection-wrapper .special-buttons {
+    .wrapper .special-collection .collection-wrapper {
       width: 100%;
       display: flex;
       flex-flow: row;
@@ -88,20 +88,23 @@
         display: flex;
         flex-flow: row;
         justify-content: space-around;
-        padding: 20px 40px; }
-        .wrapper .special-collection .collection-wrapper .special-buttons button {
+        width: 100%;
+        padding: 20px 50px;
+        list-style-type: none; }
+        .wrapper .special-collection .collection-wrapper .special-buttons li {
           width: 100%;
           font-size: medium;
           background-color: #242424;
           color: #979797;
-          border: none;
           cursor: pointer;
-          padding: 15px;
+          padding: 10px 50px;
           border-top: 6px solid #000000;
-          outline: none; }
-          .wrapper .special-collection .collection-wrapper .special-buttons button#shoe {
+          outline: none;
+          text-align: center; }
+          .wrapper .special-collection .collection-wrapper .special-buttons li.active {
             border-top: 6px solid #57c5a0;
-            color: #f5eded; }
+            color: #f5eded;
+            display: block; }
       .wrapper .special-collection .collection-wrapper .special-category {
         margin: 0 auto;
         padding: 0px;
@@ -110,18 +113,18 @@
         .wrapper .special-collection .collection-wrapper .special-category ul {
           list-style-type: none;
           display: flex;
-          flex-flow: row;
-          display: none; }
-          .wrapper .special-collection .collection-wrapper .special-category ul#shoe-list {
-            display: block; }
+          flex-flow: row; }
           .wrapper .special-collection .collection-wrapper .special-category ul li {
-            display: flex; }
-            .wrapper .special-collection .collection-wrapper .special-category ul li div img {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+            align-items: center; }
+            .wrapper .special-collection .collection-wrapper .special-category ul li img {
               margin: 20px;
               height: 200px;
               width: 327px;
               position: relative; }
-            .wrapper .special-collection .collection-wrapper .special-category ul li div .onsale {
+            .wrapper .special-collection .collection-wrapper .special-category ul li .onsale {
               position: absolute;
               display: inline-block;
               color: #bcb5a7;
@@ -131,7 +134,7 @@
               padding: 25px 47px;
               right: 927px;
               top: 945px; }
-            .wrapper .special-collection .collection-wrapper .special-category ul li div .spoffers {
+            .wrapper .special-collection .collection-wrapper .special-category ul li .spoffers {
               position: absolute;
               display: inline-block;
               color: #bcb5a7;
@@ -141,7 +144,7 @@
               padding: 25px 23px;
               right: 550px;
               top: 945px; }
-            .wrapper .special-collection .collection-wrapper .special-category ul li div .musthave {
+            .wrapper .special-collection .collection-wrapper .special-category ul li .musthave {
               position: absolute;
               display: inline-block;
               color: #bcb5a7;

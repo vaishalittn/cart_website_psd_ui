@@ -1,65 +1,26 @@
-
-$(document).ready(function(){
-    $(".special-buttons > #shoe").on('click',function(){
-        $(".special-category > .specials").hide();
-        $(".special-buttons > .specials").css({
-            'color':'#979797',
-            'border-top':'6px solid #000000'
-        });
-        $(".special-category > #shoe-list").css("display" , "block");
-        $(".special-buttons > #shoe").css("border-top","6px solid #57c5a0");
-        $(".special-buttons > #shoe").css("color" , "#f5eded");
-    });
+$(document).ready(function() {    
+    $(".special-category ul:not(:first)").hide();
+    $("#shoe").addClass('active');
 });
 
-$(document).ready(function(){
-    $(".special-buttons > #anna").on('click',function(){
-        $(".special-category > .specials").hide();
-        $(".special-buttons > .specials").css({
-            'color':'#979797',
-            'border-top':'6px solid #000000'
-        });
-        $(".special-category > #anna-list").css("display" , "block");
-        $(".special-buttons > #anna").css("border-top","6px solid #57c5a0");
-        $(".special-buttons > #anna").css("color" , "#f5eded");
-    });
-});
 
-$(document).ready(function(){
-    $(".special-buttons > #prada").on('click',function(){
-        $(".special-category > .specials").hide();
-        $(".special-buttons > .specials").css({
-            'color':'#979797',
-            'border-top':'6px solid #000000'
-        });
-        $(".special-category > #prada-list").css("display" , "block");
-        $(".special-buttons > #prada").css("border-top","6px solid #57c5a0");
-        $(".special-buttons > #prada").css("color" , "#f5eded");
-    });
-});
+$('.special-buttons > .specials').click(function () {
 
-$(document).ready(function(){
-    $(".special-buttons > #casadei").on('click',function(){
-        $(".special-category > .specials").hide();
-        $(".special-buttons > .specials").css({
-            'color':'#979797',
-            'border-top':'6px solid #000000'
-        });
-        $(".special-category > #casadei-list").css("display" , "block");
-        $(".special-buttons > #casadei").css("border-top","6px solid #57c5a0");
-        $(".special-buttons > #casadei").css("color" , "#f5eded");
-    });
-});
+    var that = this;
+    var id = $(this).attr('id');
+    var data = $(this).attr('data');
+    console.log(this);
+    console.log(that);
 
-$(document).ready(function(){
-    $(".special-buttons > #mellow").on('click',function(){
-        $(".special-category > .specials").hide();
-        $(".special-buttons > .specials").css({
-            'color':'#979797',
-            'border-top':'6px solid #000000'
-        });
-        $(".special-category > #mellow-list").css("display" , "block");
-        $(".special-buttons > #mellow").css("border-top","6px solid #57c5a0");
-        $(".special-buttons > #mellow").css("color" , "#f5eded");
+    $("#" + data).show();
+    $("#" + id).addClass('active');
+    $(".special-buttons > .specials").each(function () {
+    
+    if (this != that) {
+    var id = $(this).attr('id');
+    var data = $(this).attr('data');
+    $("#" + data).hide();
+    $("#" + id).removeClass('active');
+    }
     });
-});
+    });

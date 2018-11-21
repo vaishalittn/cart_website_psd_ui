@@ -119,80 +119,77 @@
 			
 		}
 		.special-collection{
-				background-color: #2e2e2e;
-				.collection-wrapper{
-				width: 100%;
-				@include flexjustify;
-				flex-flow:column;
-					.special-buttons{
-						background-color: #242424;
-						display:flex;
-						flex-flow: row;
-						justify-content: space-around;
-						@extend .collection-wrapper;
-						padding: 20px 40px;
-						button{
-									width: 100%;
-									font-size: medium;
-									background-color: #242424;
-									color:#979797;
-									border:none;
-									cursor: pointer;
-									padding:15px;
-									border-top: 6px solid #000000;
-									outline:none;
-						&#shoe{
-							border-top:6px solid #57c5a0;
-							color:#f5eded;
+			background-color: #2e2e2e;
+					.collection-wrapper{
+					width: 100%;
+					@include flexjustify;
+					flex-flow:column;
+						.special-buttons{
+							background-color: #242424;
+							display:flex;
+							flex-flow: row;
+							justify-content: space-around;
+							width:100%;
+							padding: 20px 50px;
+							list-style-type: none;
+
+							li{
+										width: 100%;
+										font-size: medium;
+										background-color: #242424;
+										color:#979797;
+										cursor: pointer;
+										padding:10px 50px;
+										border-top: 6px solid #000000;
+										outline:none;
+										text-align: center;
+							&.active{
+								border-top:6px solid #57c5a0;
+								color:#f5eded;
+								display: block;
+							}
+										
+							}
 						}
-									
-						}
-					}
-					.special-category{
-						margin: 0 auto;
-						padding: 0px;
-						display: flex;
-						flex-flow: column;
-						ul{
-						@include lists;
-						display: none;
-						&#shoe-list{
-							display: block;
-						}
-						li{
+						.special-category{
+							margin: 0 auto;
+							padding: 0px;
 							display: flex;
-							div{
-								img {
-								margin: 20px;
-								height: 200px;
-								width: 327px;
-								position: relative;
-								}
-									.onsale{
-										@include banner;
-										padding:25px 47px;
-										right: 927px;
-										top: 945px;
-									 }
-									.spoffers{
-										@include banner;
-										padding:25px 23px;
-										right: 550px;
-										top: 945px;
-									 }
-									 .musthave{
-										 @include banner;
-										 padding:25px 47px;
-										 right: 182px;
-										 top: 945px;
-									 }
-									
+							flex-flow: column;
+							ul{
+							@include lists;
+							li{
+								@include flexproperty;
+									img {
+									margin: 20px;
+									height: 200px;
+									width: 327px;
+									position: relative;
+									}
+										.onsale{
+											@include banner;
+											padding:25px 47px;
+											right: 927px;
+											top: 945px;
+										}
+										.spoffers{
+											@include banner;
+											padding:25px 23px;
+											right: 550px;
+											top: 945px;
+										}
+										.musthave{
+											@include banner;
+											padding:25px 47px;
+											right: 182px;
+											top: 945px;
+										}
+										
+							}
+							}
 						}
-						}
-						}
-					}
-			}
 		}
+	}
 		.arrivals-container{
 			background-color:#ebe7df;
 			width: 100%;
